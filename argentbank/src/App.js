@@ -1,11 +1,11 @@
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Link
+  Routes,
 } from 'react-router-dom';
 import './App.css';
-import Header from "../src/"
+import Header from "../src/components/Header/Header"
+import Footer from "../src/components/Footer/Footer"
 
 const App = () => {
   return (
@@ -17,15 +17,17 @@ const App = () => {
 
 function MainApp() {
   return (
-      <main className="full-height">
+      <body className="full-height">
         <Header/>
         <div className="">
-          <Route path="/login" element="Login" />
-          <Route path="/home" element="Home" />
-          <Route path="/profile" element="Profile" />
+          <Routes>
+            <Route path="/login" element="Login" />
+            <Route path="/home" element="Home" />
+            <Route path="/profile" element="Profile" />
+          </Routes>
         </div>
         <Footer/>
-      </main>
+      </body>
   );
 }
 
