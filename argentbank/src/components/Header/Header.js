@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 import "./Style/header.scss"
 import Logo from "../../assets/img/argentBankLogo.png"
 import Navbar from "../../components/Navbar/Navbar"
 
 
 const Header = () => {
+
     return (
         <nav className="main-nav">
             <a class="main-nav-logo" href="#">
