@@ -8,6 +8,7 @@ import Header from "../src/components/Header/Header"
 import Footer from "../src/components/Footer/Footer"
 import Home from "../src/pages/Home/Home"
 import SignIn from "../src/pages/Sign-in/Sign-in"
+import Profile from './pages/Profile/Profile';
 import { useLocation } from 'react-router-dom';
 
 const App = () => {
@@ -25,11 +26,11 @@ function MainApp() {
   return (
       <div className="body">
         <Header/>
-        <div  className={location.pathname === "/signin" ? "full-height main bg-dark": "full-height main" }>
-          <Routes>
+        <div  className={location.pathname === "/signin"||"/user" ? "full-height main bg-dark": "full-height main" }>
+          <Routes>            
+            <Route path="/" element={<Home/>} />
             <Route path="/signin" element={<SignIn/>} />
-            <Route path="/home" element={<Home/>} />
-            <Route path="/profile" element="Profile" />
+            <Route path="/user" element={<Profile/>} />
           </Routes>
         </div>
         <Footer/>

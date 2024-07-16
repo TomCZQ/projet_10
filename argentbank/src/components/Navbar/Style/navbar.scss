@@ -1,4 +1,9 @@
-.main-nav-item {
+a {
     text-decoration: none;
     margin-right: 0.5rem;
+    color: inherit;
+
+    &:hover{
+      text-decoration: underline 1px black;
+    }
   }

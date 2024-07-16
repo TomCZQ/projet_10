@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
-import { Navigate } from 'react-router-dom';
 import "./Style/header.scss"
 import Logo from "../../assets/img/argentBankLogo.png"
 import Navbar from "../../components/Navbar/Navbar"
 
 
+
 const Header = () => {
 
-    return (
+    
+
+     return (
+        
         <nav className="main-nav">
-            <a class="main-nav-logo" href="#">
+            <a className="main-nav-logo" href="#">
                 <img
                 className="main-nav-logo-image"
                 src={Logo}
                 alt="Argent Bank Logo"
                 />
-                <h1 class="sr-only">Argent Bank</h1>
+                <h1 className="sr-only">Argent Bank</h1>
             </a>
             <Navbar/>
         </nav>
